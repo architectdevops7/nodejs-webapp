@@ -18,12 +18,12 @@ jobs:
         with:
           node-version: 14
 
-      # - name: Install dependencies
-      #   run: |
-      #     cd /home/ubuntu/actions-runner/nodejs_work/devops-githubactions/devops-githubactions/node-webapp-githubactions
-      #     npm install
+      - name: Install dependencies
+        run: |
+          cd /home/ubuntu/actions-runner/nodejs_work/nodejs-webapp/nodejs-webapp
+          npm install
 
-      # - name: Build
-      #   run: |
-      #     cd /home/ubuntu/actions-runner/nodejs_work/devops-githubactions/devops-githubactions/node-webapp-githubactions
-      #     npm run build
+      - name: Build
+        run: |
+          cd /home/ubuntu/actions-runner/nodejs_work/nodejs-webapp/nodejs-webapp
+          npm run build
