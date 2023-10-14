@@ -40,7 +40,7 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          cd $GITHUB_WORKSPACE/nodejs-webapp
+          cd $GITHUB_WORKSPACE/nodejs_work/nodejs-webapp/nodejs-webapp
 
           # # Check if the application is already running
           # RUNNING=$(pm2 show searchapi)
