@@ -26,4 +26,4 @@ jobs:
       - name: Build
         run: |
           cd /home/ubuntu/actions-runner/nodejs_work/nodejs-webapp/nodejs-webapp
-          npm run build
+          npm build
