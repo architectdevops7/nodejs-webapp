@@ -24,4 +24,4 @@ jobs:
       - name: Create the dir
         run: |
           cd /opt
-          mkdir nodeapp-githubrunner
+          mkdir -p /opt/githubrunner
