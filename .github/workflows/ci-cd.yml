@@ -27,3 +27,31 @@ jobs:
         run: |
           cd /home/ubuntu/actions-runner/nodejs_work/nodejs-webapp/nodejs-webapp
           npm build
+
+  deploy:
+    runs-on: self-hosted
+    needs: build # Ensure the build job is completed before deploying
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main # Specify the branch to be checked out
+
+      - name: Deploy to Server
+        run: |
+          cd $GITHUB_WORKSPACE/nodejs-webapp
+
+          # # Check if the application is already running
+          # RUNNING=$(pm2 show searchapi)
+
+          # # If the application is running, stop it
+          # if [ -n "$RUNNING" ]; then
+          #   pm2 stop searchapi
+          # fi
+
+          # Install Node.js dependencies
+          npm install
+
+          # Start the application
+          pm2 start index.js --name=searchapi
