@@ -23,5 +23,5 @@ jobs:
 
       - name: Create the dir
         run: |
-          cd /opt
-          mkdir -p /opt/githubrunner
+          cd /home/ubuntu
+          mkdir githubrunner
